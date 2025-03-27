@@ -1,43 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <link rel="shortcut icon" href="transferir_html.ico">
-    <title>Trabalho de Geo</title>
+    <link rel="shortcut icon" href="logo.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACE cheats</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* Estilo global */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #121212; /* Fundo escuro */
-            color: #ffffff; /* Texto claro */
-            font-family: Arial, sans-serif; /* Fonte legível */
-        }
-        iframe {
-            width: 100%;
-            height: 100vh;
-            border: none;
-            background-color: #1e1e1e; /* Fundo escuro do iframe */
-        }
-        /* Estilo para barra de rolagem */
+        /* Estilo para a barra de rolagem */
         ::-webkit-scrollbar {
-            width: 12px;
+            width: 10px; /* Largura da barra de rolagem */
         }
+
+        /* Estilo para a parte interna da barra de rolagem (track) */
         ::-webkit-scrollbar-track {
-            background: #1e1e1e; /* Cor de fundo */
+            background: #333; /* Cor do fundo da barra de rolagem */
         }
+
+        /* Estilo para o "polegar" da barra de rolagem (a parte que você arrasta) */
         ::-webkit-scrollbar-thumb {
-            background-color: #555; /* Cor do polegar */
-            border-radius: 6px; /* Cantos arredondados */
-            border: 3px solid #1e1e1e; /* Espaçamento */
+            background: #555; /* Cor do polegar da barra de rolagem */
+            border-radius: 10px; /* Bordas arredondadas */
         }
+
+        /* Estilo quando o polegar da barra de rolagem está sendo pressionado */
         ::-webkit-scrollbar-thumb:hover {
-            background: #777; /* Cor ao passar o mouse */
+            background: #777; /* Cor do polegar ao passar o mouse */
+        }
+
+        /* Adicionando um fundo escuro e conteúdo com rolagem para testar */
+        body {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .contact-form, .hero-content, .skills-container {
+            overflow-y: auto; /* Para ter barra de rolagem caso o conteúdo ultrapasse a altura */
         }
     </style>
 </head>
 <body>
-    <iframe src="https://gamma.app/embed/izg1t7lvur0k8cn" 
-            title="Região Sul do Brasil: Uma Visão Geral">
-    </iframe>
+    <nav class="navbar">
+        <div class="logo">ACE CHEATS</div>
+        <ul class="nav-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="sobre">
+        <div class="hero-content">
+            <h1 class="title-3d">ACE CHEATS</h1>
+            <p class="subtitle">The new era of Free Fire</p>
+            <p class="bio-text">Uma nova era de cheats para FreeFire, com foco em performance e segurança para nossos usuários.</p>
+            <button class="cta-btn">Saiba Mais</button>
+        </div>
+    </section>
+
+    <section class="skills" id="habilidades">
+        <h2 class="section-title">Competências</h2>
+        <div class="skills-container">
+            <div class="skill-card" data-skill="90">
+                <div class="skill-icon"><i class="fa-solid fa-users"></i></div>
+                <span>CLIENTES SATISFEITOS</span>
+                <div class="skill-progress">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+            <div class="skill-card" data-skill="95">
+                <div class="skill-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                <span>VENDAS CONCLUÍDAS</span>
+                <div class="skill-progress">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+            <div class="skill-card" data-skill="90">
+                <div class="skill-icon"><i class="fa-solid fa-ticket"></i></div>
+                <span>SUPORTES CONCLUÍDOS</span>
+                <div class="skill-progress">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contato">
+        <h2 class="section-title">Entre em Contato</h2>
+        <div class="contact-form">
+            <button onclick="abrirSite()" class="submit-btn">
+                Entre em nosso discord para mais informações <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-socials">
+                <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="footer-text"> | © ACE cheats 2025 Todos os direitos reservados. | </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        function abrirSite() {
+            window.open('https://discord.gg/wAvDZ4GS9f', '_blank');
+        }
+    </script>
 </body>
 </html>
